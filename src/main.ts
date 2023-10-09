@@ -1,9 +1,13 @@
 import * as core from '@actions/core'
+import * as github from '@actions/github'
 import { run } from './run'
 
 const main = async (): Promise<void> => {
   await run({
-    name: core.getInput('name', { required: true }),
+    owner: github.context.repo.owner,
+    repo: github.context.repo.repo,
+    sha: core.getInput('sha', { required: true }),
+    token: core.getInput('token', { required: true }),
   })
 }
 

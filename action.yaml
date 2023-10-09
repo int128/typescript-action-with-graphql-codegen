@@ -1,10 +1,15 @@
-name: typescript-action
+name: typescript-action-with-graphql-codegen
 description: Template of TypeScript Action
 
 inputs:
-  name:
-    description: example input
+  sha:
+    description: Target commit SHA
     required: true
+    default: ${{ github.sha }}
+  token:
+    description: GitHub Token
+    required: true
+    default: ${{ github.token }}
 
 runs:
   using: 'node16'
