@@ -4,6 +4,8 @@ import * as github from '@actions/github'
 import { getAssociatedPullRequest } from './queries/getAssociatedPullRequest'
 
 type Inputs = {
+  owner: string
+  repo: string
   sha: string
   token: string
 }
@@ -13,8 +15,8 @@ export const run = async (inputs: Inputs): Promise<void> => {
 
   core.info(`Getting the associated pull request for the commit ${inputs.sha}`)
   const associatedPullRequest = await getAssociatedPullRequest(octokit, {
-    owner: github.context.repo.owner,
-    name: github.context.repo.repo,
+    owner: inputs.owner,
+    name: inputs.repo,
     expression: inputs.sha,
   })
 
