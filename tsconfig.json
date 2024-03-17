@@ -1,6 +1,3 @@
 {
-  "extends": "@tsconfig/node20/tsconfig.json",
-  "compilerOptions": {
-    "outDir": "./lib"
-  }
+  "extends": "@tsconfig/node20/tsconfig.json"
 }
