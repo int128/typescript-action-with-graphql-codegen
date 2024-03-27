@@ -1,5 +1,5 @@
-import { getAssociatedPullRequest } from '../src/queries/getAssociatedPullRequest'
-import { run } from '../src/run'
+import { getAssociatedPullRequest } from '../src/queries/getAssociatedPullRequest.js'
+import { run } from '../src/run.js'
 
 jest.mock('../src/queries/getAssociatedPullRequest')
 

@@ -1,7 +1,7 @@
 import assert from 'assert'
 import * as core from '@actions/core'
 import * as github from '@actions/github'
-import { getAssociatedPullRequest } from './queries/getAssociatedPullRequest'
+import { getAssociatedPullRequest } from './queries/getAssociatedPullRequest.js'
 
 type Inputs = {
   owner: string
