@@ -1,5 +1,4 @@
 import type { CodegenConfig } from '@graphql-codegen/cli'
-import { schema } from '@octokit/graphql-schema'
 
 const config: CodegenConfig = {
   schema: `${__dirname}/node_modules/@octokit/graphql-schema/schema.graphql`,
