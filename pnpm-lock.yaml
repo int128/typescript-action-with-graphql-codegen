@@ -34,7 +34,7 @@ importers:
         specifier: 15.25.0
         version: 15.25.0
       '@tsconfig/recommended':
-        specifier: ^1.0.8
+        specifier: 1.0.8
         version: 1.0.8
       '@types/jest':
         specifier: 29.5.14
