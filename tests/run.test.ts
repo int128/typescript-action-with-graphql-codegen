@@ -25,7 +25,6 @@ describe('run', () => {
         owner: 'octocat',
         repo: 'typescript-action-with-graphql-codegen',
         sha: '0123456789',
-        token: 'GITHUB_TOKEN',
       }),
     ).resolves.toBeUndefined()
   })
