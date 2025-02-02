@@ -29,7 +29,7 @@ describe('run', () => {
           repo: 'typescript-action-with-graphql-codegen',
           sha: '0123456789',
         },
-        new Octokit({ authStrategy: undefined }),
+        new Octokit({ authStrategy: null }),
       ),
     ).resolves.toBeUndefined()
   })
