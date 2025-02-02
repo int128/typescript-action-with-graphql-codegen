@@ -1,11 +1,12 @@
+import { describe, expect, it, vi } from 'vitest'
 import { getAssociatedPullRequest } from '../src/queries/getAssociatedPullRequest.js'
 import { run } from '../src/run.js'
 
-jest.mock('../src/queries/getAssociatedPullRequest')
+vi.mock('../src/queries/getAssociatedPullRequest')
 
 describe('run', () => {
   it('should show the associated pull request', async () => {
-    jest.mocked(getAssociatedPullRequest).mockResolvedValueOnce({
+    vi.mocked(getAssociatedPullRequest).mockResolvedValueOnce({
       repository: {
         object: {
           __typename: 'Commit',
