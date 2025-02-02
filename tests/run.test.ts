@@ -1,4 +1,5 @@
 import { describe, expect, it, vi } from 'vitest'
+import { Octokit } from '@octokit/action'
 import { getAssociatedPullRequest } from '../src/queries/getAssociatedPullRequest.js'
 import { run } from '../src/run.js'
 
@@ -22,12 +23,14 @@ describe('run', () => {
     })
 
     await expect(
-      run({
-        owner: 'octocat',
-        repo: 'typescript-action-with-graphql-codegen',
-        sha: '0123456789',
-        token: 'GITHUB_TOKEN',
-      }),
+      run(
+        {
+          owner: 'octocat',
+          repo: 'typescript-action-with-graphql-codegen',
+          sha: '0123456789',
+        },
+        new Octokit({ authStrategy: null }),
+      ),
     ).resolves.toBeUndefined()
   })
 })

@@ -1,7 +1,5 @@
-import * as github from '@actions/github'
+import { Octokit } from '@octokit/action'
 import { GetAssociatedPullRequestQuery, GetAssociatedPullRequestQueryVariables } from '../generated/graphql.js'
-
-type Octokit = ReturnType<typeof github.getOctokit>
 
 const query = /* GraphQL */ `
   query getAssociatedPullRequest($owner: String!, $name: String!, $expression: String!) {
