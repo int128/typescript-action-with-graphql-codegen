@@ -10,7 +10,7 @@
   "type": "module",
   "dependencies": {
     "@actions/core": "1.11.1",
-    "@octokit/action": "7.0.0",
+    "@octokit/action": "7.0.1",
     "graphql": "16.10.0"
   },
   "devDependencies": {
