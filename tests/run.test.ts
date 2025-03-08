@@ -25,11 +25,15 @@ describe('run', () => {
     await expect(
       run(
         {
-          owner: 'octocat',
-          repo: 'typescript-action-with-graphql-codegen',
           sha: '0123456789',
         },
         new Octokit({ authStrategy: null }),
+        {
+          repo: {
+            owner: 'octocat',
+            repo: 'typescript-action-with-graphql-codegen',
+          },
+        },
       ),
     ).resolves.toBeUndefined()
   })

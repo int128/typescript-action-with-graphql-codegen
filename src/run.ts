@@ -1,19 +1,18 @@
 import assert from 'assert'
 import * as core from '@actions/core'
+import * as github from './github.js'
 import { getAssociatedPullRequest } from './queries/getAssociatedPullRequest.js'
 import { Octokit } from '@octokit/action'
 
 type Inputs = {
-  owner: string
-  repo: string
   sha: string
 }
 
-export const run = async (inputs: Inputs, octokit: Octokit): Promise<void> => {
+export const run = async (inputs: Inputs, octokit: Octokit, context: github.Context): Promise<void> => {
   core.info(`Getting the associated pull request for the commit ${inputs.sha}`)
   const associatedPullRequest = await getAssociatedPullRequest(octokit, {
-    owner: inputs.owner,
-    name: inputs.repo,
+    owner: context.repo.owner,
+    name: context.repo.repo,
     expression: inputs.sha,
   })
 
