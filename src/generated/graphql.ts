@@ -7,4 +7,9 @@ export type GetAssociatedPullRequestQueryVariables = Types.Exact<{
 }>;
 
 
-export type GetAssociatedPullRequestQuery = { __typename?: 'Query', rateLimit?: { __typename?: 'RateLimit', cost: number, remaining: number } | null, repository?: { __typename?: 'Repository', object?: { __typename: 'Blob' } | { __typename: 'Commit', associatedPullRequests?: { __typename?: 'PullRequestConnection', nodes?: Array<{ __typename?: 'PullRequest', number: number } | null> | null } | null } | { __typename: 'Tag' } | { __typename: 'Tree' } | null } | null };
+export type GetAssociatedPullRequestQuery = { __typename?: 'Query', rateLimit?: { __typename?: 'RateLimit', cost: number, remaining: number } | null, repository?: { __typename?: 'Repository', object?:
+      | { __typename: 'Blob' }
+      | { __typename: 'Commit', associatedPullRequests?: { __typename?: 'PullRequestConnection', nodes?: Array<{ __typename?: 'PullRequest', number: number } | null> | null } | null }
+      | { __typename: 'Tag' }
+      | { __typename: 'Tree' }
+     | null } | null };
