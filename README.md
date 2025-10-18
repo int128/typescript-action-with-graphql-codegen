@@ -7,10 +7,9 @@ Inspired from https://github.com/actions/typescript-action.
 
 - GraphQL Code Generator with GitHub GraphQL schema
 - Ready to develop with the minimum configs
-  - Prettier
-  - ESLint
   - tsconfig
-  - Jest
+  - Biome
+  - Vitest
 - Automated continuous release
 - Keep consistency of generated files
 - Shipped with Renovate config
