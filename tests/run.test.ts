@@ -1,5 +1,5 @@
-import { describe, expect, it, vi } from 'vitest'
 import { Octokit } from '@octokit/action'
+import { describe, expect, it, vi } from 'vitest'
 import { getAssociatedPullRequest } from '../src/queries/getAssociatedPullRequest.js'
 import { run } from '../src/run.js'
 

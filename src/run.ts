@@ -1,8 +1,8 @@
-import assert from 'assert'
+import assert from 'node:assert'
 import * as core from '@actions/core'
-import * as github from './github.js'
+import type { Octokit } from '@octokit/action'
+import type * as github from './github.js'
 import { getAssociatedPullRequest } from './queries/getAssociatedPullRequest.js'
-import { Octokit } from '@octokit/action'
 
 type Inputs = {
   sha: string
